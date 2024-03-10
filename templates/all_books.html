@@ -1,0 +1,38 @@
+{% extends 'projectnavbar.html' %}
+{% load static %}
+{% block title %}All Books{% endblock title %}
+
+{% block main-content %}
+<br/><br/><br/><br/>
+<div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="row">
+                {% for boook in books %}
+                <div class="col text-center mb-4">
+                    <a href="{% url 'book_detail' boook.id %}" class="btn">
+                        <div>
+                            <img src="{{boook.book_image.url}}" width="300px" height="400px"/>
+                            <div class="fw-bold">{{boook.title}}</div>
+                            <div class="fw-bold text-success">
+                                Rs.{{boook.discount_price}}/-
+                                <small class="fw-light text-decoration-line-through"><del>{{boook.selling_price}}</del></small>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="buttons row flex" style="font-family: 'Roboto'; display: flex; justify-content: center; align-items: center;">
+                <button class="d-flex gap2 btn1 btn btn-danger p-1 m-1 btn-lg text-decoration-none text-white" type="submit"><i class="fa-solid fa-cart-shopping"></i>
+                    Add to cart
+                </button>
+                <div class="btn btn-dark p-1 m-1 btn-lg">
+                    <a href="#" class="text-decoration-none text-white"><i class="fa-brands fa-buy-n-large"></i> Buy Now</a>
+                </div>
+            </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<br/><br/><br/>
+{% endblock main-content %}

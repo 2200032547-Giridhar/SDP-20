@@ -1,0 +1,210 @@
+{% extends 'projectnavbar.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+
+
+{% block banner-slider %}
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100 h-80" src="https://th.bing.com/th/id/OIP.ARKRzsEKhs5Ewn1uS-QD-wHaDd?rs=1&pid=ImgDetMain" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100 h-80" src="https://cdn.mos.cms.futurecdn.net/6c3s8rMup3oTAUKywn4UTT.jpg" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100 h-80" src="https://static01.nyt.com/images/2023/11/08/t-magazine/entertainment/8tmag-tlist-slide-K8WS/8tmag-tlist-slide-K8WS-videoSixteenByNine3000.jpg" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+{% endblock banner-slider %}
+{% block information %}
+<div>
+    <div class="bg-success text-center p-5 text-white border-bottom shadow">
+        <h1>
+            Book
+        </h1>
+        <small class="fs-5">
+            An online book is a resource in book-like form that is only available to read on the Internet. It differs from the common idea of an e-book.
+
+            Information is presented in a page format; pages are normally available to read sequentially (though "flipping" to another page is possible using a mouse, keyboard, or other controllers); and pages are read passively, with little or no interaction or multimedia. This contrasts with a text which a user is reading on an interactive Web 2.0 website, which usually enables the user to click on links, to reference words or keywords. The content may only be read while the reader is connected to the Internet. Thus, the reader's experience with an online book is similar to reading a printed book, except that the book is read on an internet-connected device and is only accessible while the reader is online.
+        </small>
+    </div>
+</div>
+{% endblock information %}
+{% block main-content %}
+<div>
+    <div class="explore-menu-section pt-5 pb-5" id="exploreMenuSection">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="menu-section-heading">Explore Books</h1>
+            </div>
+
+            <!-- Sample Book Categories -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow menu-item-card p-3 mb-3">
+                    <img
+                        src="https://bookzoo.in/cdn/shop/products/56257.jpg?v=1673271420"
+                        class="menu-item-image w-100"
+                        alt="Non-Fiction"
+                    />
+                    <h1 class="menu-card-title">Crish Whitaker</h1>
+                    <a href="#" class="menu-item-link">
+                        View All Books
+                        <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                fill-rule="evenodd"
+                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                            />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow menu-item-card p-3 mb-3">
+                    <img
+                        src="https://m.media-amazon.com/images/I/71ht9y2jGfL._AC_UF1000,1000_QL80_.jpg"
+                        class="menu-item-image w-100"
+                        alt="Non-Fiction"
+                    />
+                    <h1 class="menu-card-title">IAS Academy Books</h1>
+                    <a href="#" class="menu-item-link">
+                        View All Books
+                        <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                fill-rule="evenodd"
+                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                            />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow menu-item-card p-3 mb-3">
+                    <img
+                        src="https://m.media-amazon.com/images/I/91B6RDeEDUL._AC_UF1000,1000_QL80_.jpg"
+                        class="menu-item-image w-100"
+                        alt="Non-Fiction"
+                    />
+                    <h1 class="menu-card-title">MathMatics Books</h1>
+                    <a href="#" class="menu-item-link">
+                        View All Books
+                        <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                fill-rule="evenodd"
+                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                            />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow menu-item-card p-3 mb-3">
+                    <img
+                        src="https://m.media-amazon.com/images/I/71bg2tlgCCL._AC_UF894,1000_QL80_.jpg"
+                        class="menu-item-image w-100"
+                        alt="Non-Fiction"
+                    />
+                    <h1 class="menu-card-title">Navneet Tiwari Books</h1>
+                    <a href="#" class="menu-item-link">
+                        View All Books
+                        <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                fill-rule="evenodd"
+                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                            />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow menu-item-card p-3 mb-3">
+                    <img
+                        src="https://rukminim2.flixcart.com/image/850/1000/ku4ezrk0/book/c/g/v/data-science-analytics-original-imag7b76dmm88z6j.jpeg?q=90&crop=false"
+                        class="menu-item-image w-100"
+                        alt="Non-Fiction"
+                    />
+                    <h1 class="menu-card-title">Data Science Books</h1>
+                    <a href="#" class="menu-item-link">
+                        View All Books
+                        <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                fill-rule="evenodd"
+                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                            />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow menu-item-card p-3 mb-3">
+                    <img
+                        src="https://m.media-amazon.com/images/I/51y7dVdVIrL.jpg"
+                        class="menu-item-image w-100"
+                        alt="Non-Fiction"
+                    />
+                    <h1 class="menu-card-title">World Animal Books</h1>
+                    <a href="#" class="menu-item-link">
+                        View All Books
+                        <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                fill-rule="evenodd"
+                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                            />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow menu-item-card p-3 mb-3">
+                    <img
+                        src="https://m.media-amazon.com/images/I/91KJ+VYLcLL._AC_UF1000,1000_QL80_.jpg"
+                        class="menu-item-image w-100"
+                        alt="Non-Fiction"
+                    />
+                    <h1 class="menu-card-title">Nursing Books</h1>
+                    <a href="#" class="menu-item-link">
+                        View All Books
+                        <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                fill-rule="evenodd"
+                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                            />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow menu-item-card p-3 mb-3">
+                    <img
+                        src="https://fkcms.vkpublications.com/web/thumbnail/lg/1675157328740-0.png"
+                        class="menu-item-image w-100"
+                        alt="Non-Fiction"
+                    />
+                    <h1 class="menu-card-title">Genaral Knowledge Books</h1>
+                    <a href="#" class="menu-item-link">
+                        View All Books
+                        <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                fill-rule="evenodd"
+                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                            />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<br/><br/>
+{% endblock main-content %}

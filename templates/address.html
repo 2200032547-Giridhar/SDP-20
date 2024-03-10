@@ -1,0 +1,42 @@
+{% extends 'projectnavbar.html' %}
+{% load static %}
+{% block title %}Address{% endblock title %}
+
+{% block main-content %}
+
+<br/><br/>
+<div class="container my-5">
+    <div class="row">
+        <h3>Welcome <span class="text-capitalize">{{request.user}}</span></h3>
+    </div>
+    <div class="row">
+        <div class="col-sm-2 border-end">
+            <ul class="list-unstyled">
+                <li class="d-grid"><a href="{% url 'profile' %}" class="btn">Profile</a></li>
+                <li class="d-grid"><a href="{% url 'address' %}" class="btn btn-primary">Address</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-8 offset-sm-1">
+            <div class="row">
+                {%for ad in add %}
+                <div class="col-sm-6">
+                    <div class="card m-2">
+                        <div class="card-body">
+                            <h1>Address {{forloop.counter}}</h1>
+                            <p>Name : {{ad.name}}</p>
+                            <p>Locality  : {{ad.locality}}</p>
+                            <p>Mobile : {{ad.mobile}}</p>
+                            <p>City : {{ad.city}}</p>
+                            <p>State : {{ad.state}}</p>
+                            <p>PinCode : {{ad.pincode}}</p>
+                            <p class="text-center"><a href="{% url 'updateaddress' pk=ad.id %}" type="button" class="btn btn-success">Update</a></p>
+                            <p class="text-center"><a href="{% url 'deleteaddress' pk=ad.id %}" type="button" class="btn btn-danger">Remove</a></p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main-content %}

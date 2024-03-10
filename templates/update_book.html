@@ -1,0 +1,14 @@
+{% extends 'adminnavbar.html' %}
+{% load static %}
+{% block main-content %}
+  <h2>Edit Book</h2>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Update Book</button>
+  </form>
+{% endblock main-content %}
+
+{% block styles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/add_book.css' %}">
+{% endblock styles %}

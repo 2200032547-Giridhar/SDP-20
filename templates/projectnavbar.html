@@ -1,0 +1,111 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofGJFCuLZz9gmc2a4WiT1E2D9aIbbV2MKx" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/efc5dcadba.js" crossorigin="anonymous"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Online Bookstore</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #916BBF;">
+  <a class="navbar-brand" href="#">
+    <img src="https://www.byteknightdesigns.net/wp-content/uploads/2019/04/Online-Book-Store-Logo-Generator-VL007.jpg" width="50" height="50"/>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      {% if request.user.is_authenticated %}
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'home' %}"><i class="fa-solid fa-house"></i>Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'all_books_view' %}"><i class="fa-solid fa-book"></i>Books</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa-solid fa-list"></i>
+          Categories
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="{% url 'category' 'FB' %}">Fiction</a>
+          <a class="dropdown-item" href="{% url 'category' 'NB' %}">Non fiction</a>
+            <a class="dropdown-item" href="{% url 'category' 'MB' %}">Mystery</a>
+            <a class="dropdown-item" href="{% url 'category' 'EC' %}">Education</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fa-solid fa-book-open"></i>New Releases</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'about' %}"><i class="fa-solid fa-comment"></i>About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'contact' %}"><i class="fa-solid fa-comment"></i>Contact Us</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <li class="nav-item dropdown mx-2">
+      <a class="nav-link dropdown-toggle text-white" href="#" id="profileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa-solid fa-user"></i>{{request.user}}</a>
+      <ul class="dropdown-menu" aria-labelledby="profileDropdown">
+        <li><a class="dropdown-item" href="{% url 'profile' %}">Profile</a></li>
+        <li><a class="dropdown-item" href="#">Orders</a></li>
+        <li><a class="dropdown-item" href="{% url 'password_change' %}">Change Password</a></li>
+        <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
+      </ul>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'showcart' %}"><i class="fa-solid fa-cart-shopping"></i>Cart</a>
+      </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fa-solid fa-heart"></i>Wishlist</a>
+      </li>
+    {% else %}
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'login' %}"><i class="fa-solid fa-right-to-bracket"></i>Login</a>
+      </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'customerragistration' %}"><i class="fa-solid fa-registered"></i>Register</a>
+      </li>
+    {% endif %}
+  </ul>
+</nav>
+
+{% block banner-slider %}{% endblock banner-slider %}
+{% block information %}{% endblock information %}
+{% block main-content %}{% endblock main-content %}
+{% block payment-gateway %}{% endblock payment-gateway %}
+{% block styles %}{% endblock styles %}
+
+
+
+
+<footer class="text-center text-lg-start fixed-bottom" style="background-color: #916BBF;">
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2024 Copyright:
+    <a class="text-dark" href="https://newerp.kluniversity.in/"> by Team Project. All Rights Reserved</a>
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="{% static 'js/myscript.js' %}"></script>
+
+
+</body>
+</html>
