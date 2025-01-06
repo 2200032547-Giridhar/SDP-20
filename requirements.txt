@@ -6,8 +6,8 @@ certifi==2024.2.2
 charset-normalizer==3.3.2
 click==8.1.7
 colorama==0.4.6
-Django==5.0.1
-Flask==3.0.2
+Django==4.2.5   # If using Django
+Flask==2.3.2    # If using Flask
 gunicorn==23.0.0
 idna==3.6
 itsdangerous==2.1.2
